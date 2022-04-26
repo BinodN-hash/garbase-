@@ -40,16 +40,19 @@ public class BillInquiry {
             InquiryResponse inquiryResponse = gson.fromJson(result,InquiryResponse.class);
 
 
+            System.out.println("resultCode: " +inquiryResponse.getResultCode());
+            System.out.println("resultDescription: " +inquiryResponse.getResultDescription());
 
-            System.out.println("requestId:" +inquiryResponse.getData().getRequestId());
-            System.out.println("BillMonth:" +inquiryResponse.getData().getBillMonth());
-            System.out.println("Address:"+inquiryResponse.getData().getAddress());
-            System.out.println("AreaNumber:" +inquiryResponse.getData().getAreaNumber());
-            System.out.println("Penalty:" +inquiryResponse.getData().getPenalty());
-            System.out.println("CustomerName:" +inquiryResponse.getData().getCustomerName());
-            System.out.println("Amount:" +inquiryResponse.getData().getAmount());
-            System.out.println("CustomerCOde:" +inquiryResponse.getData().getCustomerCode());
-            System.out.println("CustomerNo:" +inquiryResponse.getData().getCustomerNo());
+            System.out.println("requestId: " +inquiryResponse.getData().getRequestId());
+            System.out.println("BillMonth: " +inquiryResponse.getData().getBillMonth());
+            System.out.println("Address: "+inquiryResponse.getData().getAddress());
+            System.out.println("AreaNumber: " +inquiryResponse.getData().getAreaNumber());
+            System.out.println("Penalty: " +inquiryResponse.getData().getPenalty());
+            System.out.println("CustomerName: " +inquiryResponse.getData().getCustomerName());
+            System.out.println("Amount: " +inquiryResponse.getData().getAmount());
+            System.out.println("CustomerCOde: " +inquiryResponse.getData().getCustomerCode());
+            System.out.println("CustomerNo: " +inquiryResponse.getData().getCustomerNo());
+
 
         }
         catch (Exception e){

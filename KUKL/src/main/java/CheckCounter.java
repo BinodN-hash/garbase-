@@ -22,13 +22,17 @@ public class CheckCounter {
             post_data.put("password","0dd565b1830c9f94da1443d678caf506");
             post_data.put("channel","eSewa");
 
+
             request.setEntity(new StringEntity(post_data.toString()));
             CloseableHttpResponse response = httpClient.execute(request);
             HttpEntity entity = response.getEntity();
             String output = EntityUtils.toString(entity);
 
+            Gson gson = new Gson();
 
-            System.out.println(output);
+            CounterResponse counterResponse = gson.fromJson(output,CounterResponse.class);
+
+            System.out.println(counterResponse.getCounters().getName());
 
 
         }
